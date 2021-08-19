@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WebSocket</title>
+    <style>
+        canvas{
+            width:800px !important;
+            height:600px !important;
+        }
+
+        .div-input{
+            padding: 1rem;
+            padding-left: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <!--
+    -> Dentro de la etiqueta body, se encuentra un primer elemento div correspondiente a la ID 
+    "systemMessage" donde se mostrarán los mensajes del sistema, como su nombre lo indica, como 
+    "conectado, problema para conectarse, etc."
+
+    -> Luego se encuentran dos input para ingresar el usuario y la clave con su respectivo botón 
+    de login.
+
+    -> También estará luego un grupo que traerá un mensaje, para escribir los mensajes en el cliente.
+
+    -> Estará disponible un selector que permitirá identificar el producto a vender, estará también la 
+    cantidad vendida y un botón para vender.
+
+    -> Se encuentra después un div "content" que regresará los mensajes del chat.
+
+    -> Debajo se encontrará una etiqueta canvas con la que se dibujarán los gráficos de venta.
+
+    Nota: Herramienta utilizada para hacer los gráficos es Chart.js.
+    --> 
+
+    <div id="systemMessage"></div>
+
+    <div class="div-input">
+        <label for="usrName">Usuario</label>
+        <input type="text" id="usrName">
+    </div>
+
+    <div class="div-input">
+        <label for="password">Clave</label>
+        <input type="password" id="password">
+        <button id="btnLogin">Login</button>
+    </div>
+
+    <div class="div-input">
+        <label for="txtmsg">Mensaje</label>
+        <input type="text" id="txtmsg">
+        <button id="btnSendMessage">Enviar</button>
+    </div>
+
+    <div class="div-input">
+        <label for="product">Producto</label>
+        <select name="product" id="product">
+            <option value="0">Zapatos</option>
+            <option value="1">Camisas</option>
+            <option value="2">Billeteras</option>
+        </select>
+    </div>
+
+    <div class="div-input">
+        <label for="quantity">Cantidad</label>
+        <input type="number" id="quantity">
+        <button id="btnSale">Vender</button>
+    </div>
+    
+    <!-- Mensajes del chat -->
+    <div id="content"></div>
+
+    <canvas id="myChart" width="400" height="400"></canvas>
+
+    <!-- Charts.js -> Herramienta para graficas -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+    <script src="Clase6_2.js"></script>
+</body>
+</html> 
